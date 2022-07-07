@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Online FlowChart &amp; Diagrams Editor - DeveloperCodeBase Live Editor</title>
+		<meta
+			name="og:image"
+			content=""
+		/>
+		<link rel="canonical" href="" />
+		<meta
+			name="description"
+			content="DeveloperCodeBase."
+		/>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="manifest" href="manifest.json" />
+		<link
+			rel="stylesheet"
+			href="all.min.css"
+		/>
+		<script
+			src="mermaid.min.js"
+			integrity="sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="editor.main.min.css"
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script>
+			var require = {
+				paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.25.2/min/vs' }
+			};
+		</script>
+		<script
+			src="loader.min.js"
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="editor.main.nls.min.js"
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="editor.main.js"
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		%svelte.head%
+	</head>
+	<body>
+		<div id="svelte">%svelte.body%</div>
+	</body>
+</html>

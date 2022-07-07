@@ -1,0 +1,70 @@
+{
+	"name": "DeveloperCodeBase-live-editor",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "svelte-kit preview --port 4200 --host",
+		"dev": "svelte-kit dev  --port 4200 --host",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview --port 4200 --host",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"lint:fix": "prettier --write --plugin-search-dir=. . && eslint --fix --ignore-path .gitignore .",
+		"format": "prettier --write --plugin-search-dir=. .",
+		"pre-commit": "lint-staged",
+		"postinstall": "husky install"
+	},
+	"devDependencies": {
+		"@cypress/snapshot": "^2.1.7",
+		"@sveltejs/adapter-static": "1.0.0-next.11",
+		"@sveltejs/kit": "^1.0.0-next.109",
+		"@types/mermaid": "^8.2.6",
+		"@typescript-eslint/eslint-plugin": "^4.28.0",
+		"@typescript-eslint/parser": "^4.28.0",
+		"autoprefixer": "^10.2.6",
+		"chai": "^4.3.4",
+		"cssnano": "^5.0.6",
+		"cypress": "^7.6.0",
+		"cypress-localstorage-commands": "^1.4.5",
+		"eslint": "^7.29.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-cypress": "^2.11.3",
+		"eslint-plugin-mocha": "^9.0.0",
+		"eslint-plugin-postcss-modules": "^1.2.1",
+		"eslint-plugin-svelte3": "^3.2.0",
+		"eslint-plugin-tailwindcss": "^1.13.4",
+		"husky": "^6.0.0",
+		"lint-staged": "^11.0.0",
+		"mocha": "^9.0.1",
+		"postcss": "^8.3.5",
+		"postcss-load-config": "^3.1.0",
+		"prettier": "~2.3.1",
+		"prettier-plugin-svelte": "^2.3.1",
+		"svelte": "^3.38.3",
+		"svelte-preprocess": "^4.7.1",
+		"tailwindcss": "^2.2.4",
+		"tslib": "^2.3.0",
+		"typescript": "^4.3.4"
+	},
+	"type": "module",
+	"dependencies": {
+		"@analytics/google-analytics": "^0.5.3",
+		"@macfja/svelte-persistent-store": "^1.1.1",
+		"analytics": "^0.7.5",
+		"dotenv": "^10.0.0",
+		"js-base64": "^3.6.1",
+		"mermaid": "^8.11.0",
+		"moment": "^2.29.1",
+		"monaco-editor": "^0.25.2",
+		"random-word-slugs": "^0.0.2"
+	},
+	"lint-staged": {
+		"*.{ts,svelte,js,css,md,json}": [
+			"prettier --plugin-search-dir=. --write",
+			"eslint --ignore-path .gitignore "
+		]
+	},
+	"volta": {
+		"node": "14.16.1",
+		"yarn": "1.22.10",
+		"npm": "7.11.2"
+	}
+}
